@@ -31,24 +31,26 @@ It is also possible to print a flat history:
 
 ```bash
 ~/Projects/no-ff$ (trunk) git log --oneline --no-merges
-0c6b7f9 (HEAD -> trunk) Demonstrate git log --no-merges feature
+2e83855 (HEAD -> trunk) Add unmerged branch diagram
+b86f1fd (origin/trunk) Update git log snapshots
+a8b22c7 Demonstrate git log --no-merges feature
 27b1f43 Fix typos
-1734a46 (public/octopus2, origin/octopus2, octopus2) Add octopus leg2 2nd commit
+1734a46 (origin/octopus2, octopus2) Add octopus leg2 2nd commit
 c39f805 Add octopus leg2 1st commit
-8c9ac54 (public/octopus1, origin/octopus1, octopus1) Add octopus leg1 2nd commit
+8c9ac54 (origin/octopus1, octopus1) Add octopus leg1 2nd commit
 0e9635d Add octopus leg1 first commit
 12acadb Add README.md
-eb6b7c7 (public/middle, origin/middle, middle) It is now ready for the merge
+eb6b7c7 (origin/middle, middle) It is now ready for the merge
 e87d264 Work in the middle of history
-9d545f8 (public/big_effort, origin/big_effort, big_effort) It actually took 2 years...
+9d545f8 (origin/big_effort, big_effort) It actually took 2 years...
 414fdd6 It will take 2 months...
-92aee57 (public/lorem, origin/lorem, lorem) ipsum
+92aee57 (origin/lorem, lorem) ipsum
 e997acf Lorem
-2f1990a (public/foobar, origin/foobar, foobar) FOO_BAR002
+2f1990a (origin/foobar, foobar) FOO_BAR002
 f26e8c0 FOO_BAR001
-a9f7153 (public/bar, origin/bar, bar) BAR002
+a9f7153 (origin/bar, bar) BAR002
 7127ef3 BAR001
-918dd07 (public/foo, origin/foo, foo) F002
+918dd07 (origin/foo, foo) F002
 92ec428 F001
 02b68fc A
 ```
@@ -60,17 +62,20 @@ development details you can use git log's `--first-parent` feature as presented
 below:
 
 ```bash
-* 0c6b7f9 (HEAD -> trunk) Demonstrate git log --no-merges feature
-* 27b1f43 Fix typos
-* 1887b86 (public/trunk, origin/trunk) Merge branches 'octopus1' and 'octopus2' into trunk
-* 12acadb Add README.md
-* 9c23ba1 Merge branch 'middle' into trunk
-* 94ecbfc Merge branch 'big_effort'
-* 56deb9c Merge branch 'lorem'
-* 39dca96 Merge branch 'foobar'
-* 9dddd43 Merge branch 'bar'
-* 1d74cae Merge branch 'foo'
-* 02b68fc A
+~/Projects/no-ff$ (trunk) git log --oneline --first-parent
+2e83855 (HEAD -> trunk) Add unmerged branch diagram
+b86f1fd (origin/trunk) Update git log snapshots
+a8b22c7 Demonstrate git log --no-merges feature
+27b1f43 Fix typos
+1887b86 Merge branches 'octopus1' and 'octopus2' into trunk
+12acadb Add README.md
+9c23ba1 Merge branch 'middle' into trunk
+94ecbfc Merge branch 'big_effort'
+56deb9c Merge branch 'lorem'
+39dca96 Merge branch 'foobar'
+9dddd43 Merge branch 'bar'
+1d74cae Merge branch 'foo'
+02b68fc A
 ```
 
 ## git bisect
