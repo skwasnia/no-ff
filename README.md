@@ -31,7 +31,8 @@ It is also possible to print a flat history:
 
 ```bash
 ~/Projects/no-ff$ (trunk) git log --oneline --no-merges
-27b1f43 (HEAD -> trunk) Fix typos
+0c6b7f9 (HEAD -> trunk) Demonstrate git log --no-merges feature
+27b1f43 Fix typos
 1734a46 (public/octopus2, origin/octopus2, octopus2) Add octopus leg2 2nd commit
 c39f805 Add octopus leg2 1st commit
 8c9ac54 (public/octopus1, origin/octopus1, octopus1) Add octopus leg1 2nd commit
@@ -59,8 +60,11 @@ development details you can use git log's `--first-parent` feature as presented
 below:
 
 ```bash
-~/Projects/no-ff$ (trunk) git log --decorate --oneline --graph --first-parent
-* 9c23ba1 (HEAD -> trunk) Merge branch 'middle' into trunk
+* 0c6b7f9 (HEAD -> trunk) Demonstrate git log --no-merges feature
+* 27b1f43 Fix typos
+* 1887b86 (public/trunk, origin/trunk) Merge branches 'octopus1' and 'octopus2' into trunk
+* 12acadb Add README.md
+* 9c23ba1 Merge branch 'middle' into trunk
 * 94ecbfc Merge branch 'big_effort'
 * 56deb9c Merge branch 'lorem'
 * 39dca96 Merge branch 'foobar'
