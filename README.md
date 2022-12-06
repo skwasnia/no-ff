@@ -4,8 +4,8 @@ The purpose of this repository is to demonstrate the git's `--no-ff` feature,
 and prove that it does not break the `git bisect` feature since git's version
 2.29 thanks to `--first-parent` flag.
 
-Feel free to experiment with this inital setup, so that you can get all the pros
-and cons of the non-linear git history.
+Feel free to experiment with this initial setup, so that you can get all the
+pros and cons of the non-linear git history.
 
 I can also strongly recommend [this](https://gist.github.com/canton7/3737126)
 `gist` as it makes some really good points.
@@ -17,7 +17,7 @@ The repository consist of the following commits:
 ![git log --all --decorate --oneline --graph](git_log.png "git log --all --decorate --oneline --graph")
 
 As you can see there are feature branches being merged to the `trunk`, including
-the branches that diverty long time ago as e.g. `big_effort` and `middle`
+the branches that diverted long time ago as e.g. `big_effort` and `middle`
 branches.
 
 If you want to see a flat history of the `trunk` branch you can use git log's
