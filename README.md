@@ -80,7 +80,7 @@ a8b22c7 Demonstrate git log --no-merges feature
 
 ## git bisect
 
-If you want the git bisect to iterate only on the merge commits, you can now do
-`git bisect start --first-parent` as shown below:
+If you want the `git bisect` to iterate only on the merge commits, you can now
+do `git bisect start --first-parent` as shown below:
 
 ![git bisect start --first-parent 9c23ba1 02b68fc](git_bisect.png "git bisect start --first-parent 9c23ba1 02b68fc")
